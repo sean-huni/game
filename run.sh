@@ -4,7 +4,7 @@
 deploy(){
 # From the remote host-machine, run the following cmd
     docker pull s34n/game-img
-    docker run --name='game' -d -it -p 8004:8004 s34n/game-img && docker logs game -f
+    docker run --name='game' -d -it -p 8006:8006 s34n/game-img && docker logs game -f
 }
 
 # Tag-And-Push Script to tag & push the app

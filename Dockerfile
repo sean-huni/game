@@ -11,4 +11,4 @@ RUN java -version
 VOLUME /tmp
 RUN bash -c 'touch /app/game-service/game.jar'
 ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app/game-service/game.jar"]
-EXPOSE 8004
+EXPOSE 8006
