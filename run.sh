@@ -17,7 +17,7 @@ tagAndPush(){
 rebuild(){
     gradle clean
     gradle build
-    docker build -f Dockerfile -t game-img .
+    docker build -f Dockerfile -t game-img . --no-cache
     tagAndPush
 }
 
