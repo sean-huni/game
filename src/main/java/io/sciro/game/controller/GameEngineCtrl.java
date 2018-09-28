@@ -19,10 +19,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/game-engine")
 public class GameEngineCtrl {
-    private EngineService engineService;
+    private final EngineService engineService;
 
     @Autowired
-    public GameEngineCtrl(EngineService engineService) {
+    public GameEngineCtrl(final EngineService engineService) {
         this.engineService = engineService;
     }
 
