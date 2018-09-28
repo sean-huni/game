@@ -4,9 +4,7 @@ import io.sciro.game.enums.HandSignal;
 import io.sciro.game.service.EngineService;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.Random;
 
 /**
  * PROJECT   : game
@@ -21,10 +19,8 @@ import java.util.List;
 public class EngineServiceImpl implements EngineService {
 
     @Override
-    public String pcMove() {
-        List<HandSignal> handSignals = Arrays.asList(HandSignal.values());
-        Collections.shuffle(handSignals);
-
-        return handSignals.stream().findFirst().get().getSignal();
+    public HandSignal pcMove() {
+        Random rnd = new Random();
+        return HandSignal.values()[rnd.nextInt(HandSignal.values().length)];
     }
 }

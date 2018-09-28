@@ -1,5 +1,7 @@
 package io.sciro.game.service;
 
+import io.sciro.game.enums.HandSignal;
+
 /**
  * PROJECT   : game
  * PACKAGE   : io.sciro.game.service
@@ -10,5 +12,5 @@ package io.sciro.game.service;
  * CELL      : +27-64-906-8809
  */
 public interface EngineService {
-    String pcMove();
+    HandSignal pcMove();
 }

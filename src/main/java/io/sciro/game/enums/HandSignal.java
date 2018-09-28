@@ -10,17 +10,5 @@ package io.sciro.game.enums;
  * CELL      : +27-64-906-8809
  */
 public enum HandSignal {
-    ROC("ROCK"),
-    PAP("PAPER"),
-    SCI("SCISSORS");
-
-    private String signal;
-
-    HandSignal(String signal) {
-        this.signal = signal;
-    }
-
-    public String getSignal() {
-        return signal;
-    }
+    ROCK, PAPER, SCISSORS
 }
