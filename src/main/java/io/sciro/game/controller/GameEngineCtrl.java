@@ -1,6 +1,5 @@
 package io.sciro.game.controller;
 
-import io.sciro.game.enums.HandSignal;
 import io.sciro.game.service.EngineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +26,7 @@ public class GameEngineCtrl {
     }
 
     @GetMapping("/pc-move")
-    public HandSignal pcMove() {
-        return engineService.pcMove();
+    public String pcMove() {
+        return engineService.pcMove().toString();
     }
 }
